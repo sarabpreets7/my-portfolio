@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{ useEffect }  from "react";
+import "./App.css";
+import Main from "./containers/Main";
+import { ThemeProvider } from "styled-components";
+import { chosenTheme } from "./theme";
+import { GlobalStyles } from "./global";
 
 function App() {
+  useEffect(() => {
+    document.title = 'My Page';
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={chosenTheme}>
+      <>
+        <GlobalStyles />
+        <div>
+          <Main theme={chosenTheme} />
+        </div>
+      </>
+    </ThemeProvider>
   );
 }
 
