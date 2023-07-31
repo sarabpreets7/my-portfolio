@@ -4,18 +4,54 @@ import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
 import { greeting, settings } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
+import {
+  blueTheme,
+  brownTheme,
+  purpleTheme,
+  greenTheme,
+  redTheme,
+  blackTheme,
+  pinkTheme,
+  violetTheme,
+  tealTheme,
+  orangeTheme,
+  yellowTheme,
+  materialDarkTheme,
+  materialLightTheme,
+  materialTealTheme,
+} from '../../theme';
+
+const themes = [
+  blueTheme,
+  brownTheme,
+  purpleTheme,
+  greenTheme,
+  redTheme,
+  blackTheme,
+  pinkTheme,
+  violetTheme,
+  tealTheme,
+  orangeTheme,
+  yellowTheme,
+  materialDarkTheme,
+  materialLightTheme,
+  materialTealTheme,
+];
 
 const onMouseEnter = (event, color) => {
   const el = event.target;
   el.style.backgroundColor = color;
 };
-
+const isMobileDevice = () => {
+  return window.innerWidth <= 768; 
+};
 const onMouseOut = (event) => {
   const el = event.target;
   el.style.backgroundColor = "transparent";
 };
 
 class Header extends Component {
+
   render() {
     const theme = this.props.theme;
     const link = settings.isSplash ? "/splash" : "home";
@@ -108,6 +144,30 @@ class Header extends Component {
                   Contact Me
                 </NavLink>
               </li>
+{isMobileDevice() &&
+             ( <li style={{padding:'18px'}}>
+                <span style={{ color: theme.text }}>Choose theme</span>
+                <div className="themes">
+                  <div className="theme-picker-container" style={{position:'initial',marginLeft: '116px',
+    width:'100%'}}>
+                    <div className="theme-picker" style={{width:'100%'}}>
+                      <div className="color-pallet">
+                        {themes.map((theme, idx) => (
+                          <div
+                            key={idx}
+                            className="color"
+                            onClick={() => {
+                              this.props.changeTheme(theme);
+                            }}
+                            style={{ background: theme.body }}
+                          ></div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+             )}
             </ul>
           </header>
         </div>

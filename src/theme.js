@@ -165,6 +165,7 @@ export const materialDarkTheme = {
   jacketColor: "#8eacbb",
   headerColor: "#34515e",
   splashBg: "#4f5b62",
+  theme:'dark'
 };
 
 export const materialLightTheme = {
@@ -193,7 +194,9 @@ export const materialTealTheme = {
   jacketColor: "#E1E2E1",
   headerColor: "#E1E2E1",
   splashBg: "#05505E",
+  theme:'light'
 };
 
-export const chosenTheme = materialDarkTheme;
+export const chosenTheme = materialTealTheme;
 //materialDarkTheme
+//materialTealTheme

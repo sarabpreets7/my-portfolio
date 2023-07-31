@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
 import "./SocialMedia.css";
 import { socialMediaLinks } from "../../portfolio";
 import styled from "styled-components";
+import EmailPopup from "../emailPopup/emailPopup";
 
 const IconWrapper = styled.span`
   i {
@@ -13,12 +14,37 @@ const IconWrapper = styled.span`
   }
 `;
 
-export default function socialMedia(props) {
+const SocialMedia = (props) => {
+  
+  const [isEmailPopupOpen, setIsEmailPopupOpen] = useState(false);
+  const email = "sarabpreets7@gmail.com"; // Replace with your actual email
+
+  const toggleEmailPopup = () => {
+    setIsEmailPopupOpen(!isEmailPopupOpen);
+  };
+
   return (
     <div className="social-media-div">
       {socialMediaLinks.map((media) => {
-        return (
+        return media.name == "Gmail" ? (
+          <span
+            key={media.name}
+            className={`icon-button`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={toggleEmailPopup}
+          >
+            {isEmailPopupOpen && (
+              <EmailPopup email={email} color={props.theme.body} onClose={toggleEmailPopup} />
+            )}
+           {!isEmailPopupOpen &&(<IconWrapper {...media} {...props}>
+              <i className={`fab ${media.fontAwesomeIcon}`}></i>
+            </IconWrapper>)
+      }
+          </span>
+        ) : (
           <a
+            key={media.name}
             href={media.link}
             className={`icon-button`}
             target="_blank"
@@ -27,10 +53,11 @@ export default function socialMedia(props) {
             <IconWrapper {...media} {...props}>
               <i className={`fab ${media.fontAwesomeIcon}`}></i>
             </IconWrapper>
-            {/* <span></span> */}
           </a>
         );
       })}
     </div>
   );
-}
+};
+
+export default SocialMedia;

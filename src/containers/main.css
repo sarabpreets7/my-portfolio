@@ -1,0 +1,166 @@
+.toggle-container {
+    position: absolute;
+    top: 30px;
+    left: 380px;
+    z-index: 999;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    padding: 2px;
+  }
+  
+  .toggle-button {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.4s;
+  }
+  
+  .toggle-button::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: #2196f3; /* Default background color (light theme) */
+    transition: 0.4s;
+  }
+  
+  /* Styles for dark theme */
+  .toggle-container.dark {
+    background-color: #333;
+  }
+  
+  .toggle-container.dark .toggle-button::before {
+    background-color: #fff; /* Background color for dark theme */
+  }
+  
+  /* Styles for checked (toggled) state */
+  input:checked + .toggle-container .toggle-button {
+    transform: translateX(26px);
+  }
+  
+  /* Styles for checked (toggled) state in dark theme */
+  input:checked + .toggle-container.dark .toggle-button {
+    transform: translateX(-2px);
+  }
+
+
+  .toggle-container {
+    position: absolute;
+    top: 30px;
+    left: 380px;
+    z-index: 999;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    padding: 2px;
+    transition: background-color 0.2s;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.2s;
+  }
+  
+  /* Styles for dark theme */
+  .toggle-container.dark {
+    background-color: #333;
+  }
+  
+  .toggle-container.dark .toggle-button {
+    background-color: #fff; /* Background color for dark theme */
+  }
+  
+  /* Styles for checked (toggled) state */
+  input:checked + .toggle-container .toggle-button {
+    transform: translateX(26px);
+  }
+  
+  /* Styles for checked (toggled) state in dark theme */
+  input:checked + .toggle-container.dark .toggle-button {
+    transform: translateX(-2px);
+  }
+
+  .theme-picker-container {
+    top: 24px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+
+
+
+
+
+
+  .theme-picker-container {
+    position: fixed;
+    z-index: 99999;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .theme-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .color-pallet {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .color {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .color:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 600px) {
+    .theme-picker-container {
+      top: 60px;
+    }
+  
+    .color-pallet {
+      flex-wrap: wrap;
+    }
+  
+    .color {
+      margin: 5px;
+    }
+  
+    /* Move toggle-container to the top */
+    .toggle-container {
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }

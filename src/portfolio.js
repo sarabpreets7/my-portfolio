@@ -486,14 +486,25 @@ const experience = {
       title: "Work",
       experiences: [
         {
+          title: "Front-End Developer",
+          company: "BluSmart",
+          company_url: "https://blu-smart.com/",
+          logo_path: "blu.jpg",
+          duration: "Aug 2023 - present",
+          location: "Gurgaon",
+          // description:
+          //   "I am working on a business app called Upscale,which is one of the products of Credable.It is an all-in-one credit and cashflow managment app for businesses.",
+          color: "#0879bf",
+        },
+        {
           title: "Associate Product Engineer",
           company: "Credable",
-          company_url: "https://legatohealthtech.com/",
+          company_url: "https://www.credable.in/",
           logo_path: "credable.jpg",
-          duration: "Feb 2022 - Present",
+          duration: "Feb 2022 - Aug 2023",
           location: "Noida, Uttar Pradesh",
           description:
-            "I am working on a business app called Upscale,which is one of the products of Credable.It is an all-in-one credit and cashflow managment app for businesses.",
+            "Worked on a business app called Upscale,which is one of the products of Credable.It is an all-in-one credit and cashflow managment app for businesses.",
           color: "#0879bf",
         },
         
