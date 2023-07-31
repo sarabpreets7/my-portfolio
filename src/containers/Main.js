@@ -50,11 +50,11 @@ function Main({ theme, changeTheme }) {
           <Route path="/contact">
             <Contact  changeTheme={changeTheme} theme={theme} />
           </Route>
-          {!settings.isSplash && (
+          {/* {!settings.isSplash && (
             <Route path="/splash">
               <Splash theme={theme} />
             </Route>
-          )}
+          )} */}
           <Route path="/projects">
             <Projects  changeTheme={changeTheme} theme={theme} />
           </Route>
