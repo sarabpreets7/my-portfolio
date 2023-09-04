@@ -33,7 +33,8 @@ function Main({ theme, changeTheme }) {
         <Switch>
           {/* Routes */}
           <Route exact path="/">
-            <Splash theme={theme} />
+            {/* <Splash theme={theme} /> */}
+            <Home changeTheme={changeTheme} theme={theme} />
           </Route>
           <Route path="/home">
             <Home changeTheme={changeTheme} theme={theme} />

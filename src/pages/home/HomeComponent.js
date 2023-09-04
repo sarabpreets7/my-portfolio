@@ -12,7 +12,7 @@ class Home extends Component {
         <Header changeTheme={this.props.changeTheme} theme={this.props.theme} />
         <Greeting theme={this.props.theme} />
         <Skills theme={this.props.theme} />
-        <Footer theme={this.props.theme} />
+        {/* <Footer theme={this.props.theme} /> */}
         <TopButton theme={this.props.theme} />
       </div>
     );

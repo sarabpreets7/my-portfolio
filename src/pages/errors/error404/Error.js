@@ -31,7 +31,7 @@ export default class Error extends Component {
             </Link>
           </Fade>
         </div>
-        <Footer theme={this.props.theme} />
+        {/* <Footer theme={this.props.theme} /> */}
         <TopButton theme={this.props.theme} />
       </div>
     );

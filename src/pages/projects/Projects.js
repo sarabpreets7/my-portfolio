@@ -92,7 +92,7 @@ class Projects extends Component {
           })}
         </div>
 
-        <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
+        {/* <Footer theme={this.props.theme} onToggle={this.props.onToggle} /> */}
         <TopButton theme={this.props.theme} />
       </div>
     );

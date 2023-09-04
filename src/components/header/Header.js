@@ -5,36 +5,17 @@ import { NavLink, Link } from "react-router-dom";
 import { greeting, settings } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
 import {
-  blueTheme,
-  brownTheme,
-  purpleTheme,
-  greenTheme,
-  redTheme,
-  blackTheme,
-  pinkTheme,
-  violetTheme,
-  tealTheme,
-  orangeTheme,
+
   yellowTheme,
   materialDarkTheme,
-  materialLightTheme,
+
   materialTealTheme,
 } from '../../theme';
 
 const themes = [
-  blueTheme,
-  brownTheme,
-  purpleTheme,
-  greenTheme,
-  redTheme,
-  blackTheme,
-  pinkTheme,
-  violetTheme,
-  tealTheme,
-  orangeTheme,
   yellowTheme,
   materialDarkTheme,
-  materialLightTheme,
+
   materialTealTheme,
 ];
 

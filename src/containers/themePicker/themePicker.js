@@ -3,36 +3,16 @@ import './ThemePicker.css'; // Add your custom styles for the ThemePicker compon
 
 // Import all the theme objects
 import {
-  blueTheme,
-  brownTheme,
-  purpleTheme,
-  greenTheme,
-  redTheme,
-  blackTheme,
-  pinkTheme,
-  violetTheme,
-  tealTheme,
-  orangeTheme,
   yellowTheme,
   materialDarkTheme,
-  materialLightTheme,
+
   materialTealTheme,
 } from '../../theme';
 
 const themes = [
-  blueTheme,
-  brownTheme,
-  purpleTheme,
-  greenTheme,
-  redTheme,
-  blackTheme,
-  pinkTheme,
-  violetTheme,
-  tealTheme,
-  orangeTheme,
   yellowTheme,
   materialDarkTheme,
-  materialLightTheme,
+
   materialTealTheme,
 ];
 
