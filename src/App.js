@@ -10,7 +10,7 @@ import ReactGA from 'react-ga';
 function App() {
   const [chosenTheme,setTheme] = useState(materialTealTheme)
   useEffect(() => {
-    ReactGA.initialize('3821562972');
+    ReactGA.initialize('G-QZ749QPNW3');
     ReactGA.pageview(window.location.pathname + window.location.search)
 
     document.title = 'My Page';
