@@ -5,10 +5,14 @@ import { ThemeProvider } from "styled-components";
 import {  materialTealTheme,materialDarkTheme } from "./theme";
 import { GlobalStyles } from "./global";
 import { useState } from "react";
+import ReactGA from 'react-ga';
 
 function App() {
   const [chosenTheme,setTheme] = useState(materialTealTheme)
   useEffect(() => {
+    ReactGA.initialize('G-QZ749QPNW3');
+    ReactGA.pageview(window.location.pathname + window.location.search)
+
     document.title = 'My Page';
   }, []);
   
