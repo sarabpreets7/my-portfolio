@@ -1,6 +1,9 @@
-// src/components/BackgroundAnimation.js
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import angularIcon from "../assests/images/ang.png";
+import reactIcon from "../assests/images/react.png";
+import htmlIcon from "../assests/images/html.png";
+import jsIcon from "../assests/images/js.png";
 
 const FullPage = styled.div`
   position: fixed;
@@ -12,6 +15,14 @@ const FullPage = styled.div`
   z-index: -1;
 `;
 
+const icons = [
+    angularIcon, // Path to Angular icon
+    reactIcon,   // Path to React icon
+    htmlIcon,    // Path to HTML icon
+    jsIcon,     // Path to CSS icon
+  // Add more icons as needed
+];
+
 const BackgroundAnimation = ({ theme }) => {
   const canvasRef = useRef(null);
 
@@ -22,28 +33,30 @@ const BackgroundAnimation = ({ theme }) => {
     canvas.height = window.innerHeight;
 
     let particlesArray = [];
+    const numberOfParticles = 25; // Adjust number of particles here
 
-    const numberOfParticles = 50; // Adjust number of particles here
+    // Load icons as images
+    const images = icons.map(src => {
+      const img = new Image();
+      img.src = src;
+      return img;
+    });
 
-    // Create particle
+    // Modified Particle class to use images
     class Particle {
       constructor() {
-        this.x = Math.random() * canvas.width; // Random starting x position
-        this.y = Math.random() * canvas.height; // Random starting y position
-        this.size = Math.random() * 5 + 1; // Random size
-        this.speedX = Math.random() * 3 - 1.5; // Random x speed
-        this.speedY = Math.random() * 3 - 1.5; // Random y speed
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.image = images[Math.floor(Math.random() * images.length)]; // Randomly select an image
+        this.size = Math.random() * 20 + 10; // Adjust size as needed
+        this.speedX = Math.random() * 3 - 1.5;
+        this.speedY = Math.random() * 3 - 1.5;
       }
 
-      // Method to draw individual particle
       draw() {
-        ctx.fillStyle = theme.text || 'white'; // Use theme text color or default to white
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.drawImage(this.image, this.x, this.y, this.size, this.size);
       }
 
-      // Method to update particle's position
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
@@ -53,7 +66,6 @@ const BackgroundAnimation = ({ theme }) => {
       }
     }
 
-    // Initialize particles
     function init() {
       particlesArray = [];
       for (let i = 0; i < numberOfParticles; i++) {
@@ -61,7 +73,6 @@ const BackgroundAnimation = ({ theme }) => {
       }
     }
 
-    // Animation loop
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       particlesArray.forEach(particle => particle.update());
@@ -71,17 +82,15 @@ const BackgroundAnimation = ({ theme }) => {
     init();
     animate();
 
-    // Handle window resize
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      init(); // Re-initialize particles on resize
+      init();
     });
 
   }, [theme]);
 
   return <canvas ref={canvasRef} style={{position: 'fixed', top: '0', pointerEvents: 'none'}}></canvas>;
-
 };
 
 export default BackgroundAnimation;
