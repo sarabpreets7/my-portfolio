@@ -33,7 +33,7 @@ const BackgroundAnimation = ({ theme }) => {
     canvas.height = window.innerHeight;
 
     let particlesArray = [];
-    const numberOfParticles = 25; // Adjust number of particles here
+    const numberOfParticles = 0; // Adjust number of particles here
 
     // Load icons as images
     const images = icons.map(src => {
