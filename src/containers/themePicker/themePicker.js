@@ -16,20 +16,21 @@ const themes = [
 
 const ThemePicker = (props) => {
   return (
-    <div className="theme-picker-container">
-      {themes.map(({ theme, name }, idx) => (
-        <div
-          key={idx}
-          className="theme-option"
-          onClick={() => props.changeTheme(theme)}
-          style={{ backgroundColor: theme.body }}
-          title={`Switch to ${name} Theme`}
-        >
-          <div className="theme-name">{name}</div>
-        </div>
-      ))}
-    </div>
-  );
+    // <div className="theme-picker-container">
+    //   {themes.map(({ theme, name }, idx) => (
+    //     <div
+    //       key={idx}
+    //       className="theme-option"
+    //       onClick={() => props.changeTheme(theme)}
+    //       style={{ backgroundColor: theme.body }}
+    //       title={`Switch to ${name} Theme`}
+    //     >
+    //       <div className="theme-name">{name}</div>
+    //     </div>
+    //   ))}
+    // </div>
+    <></>
+  )
 };
 
 export default ThemePicker;

@@ -5,37 +5,51 @@ import { NavLink, Link } from "react-router-dom";
 import { greeting, settings } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
 import {
-
   yellowTheme,
   materialDarkTheme,
-
   materialTealTheme,
-} from '../../theme';
+} from "../../theme";
 
-const themes = [
-  yellowTheme,
-  materialDarkTheme,
-
-  materialTealTheme,
-];
+const themes = [yellowTheme, materialDarkTheme, materialTealTheme];
 
 const onMouseEnter = (event, color) => {
   const el = event.target;
   el.style.backgroundColor = color;
 };
-const isMobileDevice = () => {
-  return window.innerWidth <= 768; 
-};
+
 const onMouseOut = (event) => {
   const el = event.target;
   el.style.backgroundColor = "transparent";
 };
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentThemeIndex: 0, // Initial theme index
+    };
+  }
+  adjustButtonBackground = (color) => {
+    // Slightly adjust the button background for better contrast
+    if (color === "rgb(255, 217, 93)") return "rgb(230, 180, 50)"; // Softer yellow
+    if (color === "rgb(38, 50, 56)") return "rgb(50, 70, 80)"; // Slightly lighter teal
+    if (color === "rgb(255, 255, 255)") return "rgb(245, 245, 245)"; // Off-white for contrast
+    return color; // Fallback
+  };
+  toggleTheme = () => {
+    const { currentThemeIndex } = this.state;
+    const nextThemeIndex = (currentThemeIndex + 1) % themes.length; // Cycle through themes
+    this.setState({ currentThemeIndex: nextThemeIndex }, () => {
+      // Call changeTheme with the updated theme
+      this.props.changeTheme(themes[nextThemeIndex]);
+    });
+  };
 
   render() {
     const theme = this.props.theme;
     const link = settings.isSplash ? "/splash" : "home";
+    const { currentThemeIndex } = this.state;
+
     return (
       <Fade top duration={1000} distance="20px">
         <SeoHeader />
@@ -59,7 +73,9 @@ class Header extends Component {
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
+                  onMouseEnter={(event) =>
+                    onMouseEnter(event, theme.highlight)
+                  }
                   onMouseOut={(event) => onMouseOut(event)}
                 >
                   Home
@@ -71,7 +87,9 @@ class Header extends Component {
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
+                  onMouseEnter={(event) =>
+                    onMouseEnter(event, theme.highlight)
+                  }
                   onMouseOut={(event) => onMouseOut(event)}
                 >
                   Education
@@ -83,7 +101,9 @@ class Header extends Component {
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
+                  onMouseEnter={(event) =>
+                    onMouseEnter(event, theme.highlight)
+                  }
                   onMouseOut={(event) => onMouseOut(event)}
                 >
                   Experience
@@ -95,60 +115,62 @@ class Header extends Component {
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
+                  onMouseEnter={(event) =>
+                    onMouseEnter(event, theme.highlight)
+                  }
                   onMouseOut={(event) => onMouseOut(event)}
                 >
                   Projects
                 </NavLink>
               </li>
-              {/* <li>
-                <NavLink
-                  to="/opensource"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Open Source
-                </NavLink>
-              </li> */}
               <li>
                 <NavLink
                   to="/contact"
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
+                  onMouseEnter={(event) =>
+                    onMouseEnter(event, theme.highlight)
+                  }
                   onMouseOut={(event) => onMouseOut(event)}
                 >
                   Contact Me
                 </NavLink>
               </li>
-{isMobileDevice() &&
-             ( <li style={{padding:'18px'}}>
+
+              {/* Add the theme toggle button here for all devices */}
+              {/* <li style={{ padding: "18px" }}>
                 <span style={{ color: theme.text }}>Choose theme</span>
                 <div className="themes">
-                  <div className="theme-picker-container" style={{position:'initial',marginLeft: '116px',
-    width:'100%'}}>
-                    <div className="theme-picker" style={{width:'100%'}}>
-                      <div className="color-pallet">
-                        {themes.map((theme, idx) => (
-                          <div
-                            key={idx}
-                            className="color"
-                            onClick={() => {
-                              this.props.changeTheme(theme);
-                            }}
-                            style={{ background: theme.body }}
-                          ></div>
-                        ))}
-                      </div>
+                  <div
+                    className="theme-picker-container"
+                    style={{
+                      position: "initial",
+                      marginLeft: "116px",
+                      width: "100%",
+                    }}
+                  >
+                    <div className="theme-picker" style={{ width: "100%" }}>
+               <button
+  className="toggle-theme-button"
+  onClick={this.toggleTheme}
+  style={{
+    background: this.adjustButtonBackground(themes[currentThemeIndex].body),
+    color: themes[currentThemeIndex].text || "#fff",
+    border: "none",
+    padding: "10px 20px",
+    cursor: "pointer",
+    fontSize: "16px",
+    borderRadius: "5px",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // For a subtle shadow effect
+  }}
+>
+  Toggle Theme
+</button>
                     </div>
                   </div>
                 </div>
-              </li>
-             )}
+              </li> */}
             </ul>
           </header>
         </div>
@@ -156,4 +178,5 @@ class Header extends Component {
     );
   }
 }
+
 export default Header;
