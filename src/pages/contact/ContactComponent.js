@@ -10,7 +10,7 @@ import AddressImg from "./AddressImg";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../portfolio.js";
-import profile from "./profile.jpeg";
+import profile from "./profileImg.jpg";
 
 const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;

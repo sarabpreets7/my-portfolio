@@ -486,12 +486,23 @@ const experience = {
       title: "Work",
       experiences: [
         {
+          title: "SDE-2 Frontend Developer",
+          company: "Arrise Powering Pragmatic Play",
+          company_url: "https://www.arrise.com/",
+          logo_path: "react.png",
+          duration: "April 2025 - Present",
+          location: "Gurugram",
+          description:
+            "Built and maintained a scalable internal dashboard using React and Next.js, improving operational efficiency and data visibility.",
+          color: "#0879bf",
+        },
+        {
           title: "Front-End Developer",
           company: "BluSmart",
           company_url: "https://blu-smart.com/",
           logo_path: "blu.jpg",
-          duration: "Aug 2023 - present",
-          location: "Gurgaon",
+          duration: "Aug 2023 - March 2025",
+          location: "Gurugram",
           // description:
           //   "I am working on a business app called Upscale,which is one of the products of Credable.It is an all-in-one credit and cashflow managment app for businesses.",
           color: "#0879bf",

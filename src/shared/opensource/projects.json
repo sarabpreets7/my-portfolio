@@ -5,7 +5,7 @@
       "name": "Chat App(React)",
       "createdAt": "2020-03-06T16:26:54Z",
       "url": "https://github.com/sarabpreets7/production-chat-app",
-      "description": "🔥 Built an Awesome Full Stack Chat App Project with realtime messaging fuctionality with socket.io . We have one on one chat as well as group chatting functionality in this app.",
+      "description": "🔥 Built a full-stack real-time chat platform with React and Node.js using Socket.IO for low-latency communication. Implemented one-to-one and group conversations, user presence indicators, and message state handling for a smoother chat experience. Focused on reusable frontend components and responsive layouts to keep the app fast and usable across devices.",
       "isFork": false,
       "languages": [
         {
@@ -30,11 +30,11 @@
       ]
     },
     {
-      "id": "R_kgDOG_vYHA",
-      "name": "Amazon Clone App",
-      "createdAt": "2022-03-13T20:41:33Z",
-      "url": "https://github.com/sarabpreets7/reactjs-amazon-clone",
-      "description": "📦 A clone of amazon’s shopping website,with basic functions and features.",
+      "id": "BLUSMART_WEB_REVAMP_2024",
+      "name": "BluSmart Official Website Revamp",
+      "createdAt": "2024-01-15T00:00:00Z",
+      "url": "https://blu-smart.com/",
+      "description": "🚀 Revamped BluSmart’s official website by redesigning key frontend journeys, improving page structure, and optimizing user flows for conversion. Implemented performance-focused enhancements such as lighter assets, cleaner component architecture, and better responsive behavior across breakpoints. The revamp improved UX quality and contributed to a 30% increase in site traffic.",
       "isFork": false,
       "languages": [
         {
@@ -42,23 +42,21 @@
           "iconifyClass":"simple-icons:react"
         },
         {
-          "name": "firebase",
-          "iconifyClass": "simple-icons:firebase"
-         
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
         },
         {
-          "name": "redux",
-          "iconifyClass": "simple-icons:redux"
-         
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
         }
       ]
     },
     {
-      "id": "R_kgDOG0_8uQ",
-      "name": "Disney + Hotstar Clone",
-      "createdAt": "2022-02-11T14:50:20Z",
-      "url": "https://github.com/sarabpreets7/disney-Clone",
-      "description": "🌀 A full stack, Disney+ CLONE built using React, Redux, and Firebase.",
+      "id": "BLUSMART_DISPATCH_DASHBOARD_2024",
+      "name": "BluSmart Dispatch Admin Dashboard",
+      "createdAt": "2024-08-20T00:00:00Z",
+      "url": "https://blu-smart.com/",
+      "description": "📊 Built a real-time dispatch admin dashboard used by operations teams to track rides, assign drivers, and monitor ride status updates live. Developed frontend modules for scheduling views, action workflows, and operational alerts while integrating APIs for continuous state refresh. Also mentored interns on production-grade React patterns and delivery practices.",
       "isFork": false,
       "languages": [
         {
@@ -66,14 +64,12 @@
           "iconifyClass":"simple-icons:react"
         },
         {
-          "name": "firebase",
-          "iconifyClass": "simple-icons:firebase"
-         
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
         },
         {
-          "name": "redux",
-          "iconifyClass": "simple-icons:redux"
-         
+          "name": "NPM",
+          "iconifyClass": "simple-icons:npm"
         }
       ]
     },
@@ -82,7 +78,7 @@
       "name": "Microsoft Excel Clone",
       "createdAt": "2021-11-26T17:56:07Z",
       "url": "https://github.com/sarabpreets7/MS-Excel-clone/tree/master",
-      "description": "⚙️Includes most of the prominent features of excel along with file saving/downloading/uploading functionality.",
+      "description": "⚙️ Built a spreadsheet-style web app inspired by Excel with formula support, cell dependency handling, and multi-sheet interactions. Implemented grid operations, formatting controls, and client-side logic for data manipulation similar to desktop spreadsheet behavior. Added file save, upload, and download capabilities to support end-to-end document workflows.",
       "isFork": false,
       "languages": [
         {
@@ -101,16 +97,46 @@
       ]
     },
     {
-      "id": "MDEwOlJlcG9zaXRvcnkzMjcyMjI5Njk=",
-      "name": "Uber-Eats Clone",
-      "createdAt": "2021-01-06T06:36:41Z",
-      "url": "https://github.com/sarabpreets7/uber-eats-clone-react-native",
-      "description": "🚀  A clone of Uber eats built using react native,redux.",
+      "id": "ARRISE_INTERNAL_DASHBOARD_2025",
+      "name": "Arrise Internal Operations Dashboard",
+      "createdAt": "2025-04-10T00:00:00Z",
+      "url": "https://www.arrise.com/",
+      "description": "⚡ Built and maintained a scalable internal operations dashboard at Arrise using React, Next.js, and TypeScript. Led frontend delivery for critical modules including analytics views, workflow screens, and data-heavy interfaces used by internal stakeholders. Improved usability and data visibility by structuring reusable UI components and consistent state-driven flows.",
       "isFork": false,
       "languages": [
         {
           "name":"React",
           "iconifyClass":"simple-icons:react"
+        },
+        {
+          "name":"Next.js",
+          "iconifyClass":"simple-icons:nextdotjs"
+        },
+        {
+          "name":"TypeScript",
+          "iconifyClass":"simple-icons:typescript"
+        }
+      ]
+    },
+    {
+      "id": "GOV_MOBILITY_DASHBOARD_2024",
+      "name": "Government Mobility Operations Dashboard",
+      "createdAt": "2024-11-05T00:00:00Z",
+      "url": "https://www.india.gov.in/",
+      "description": "🏛️ Led frontend development for a government mobility operations dashboard, delivering responsive React modules for live fleet visibility, incident tracking, and role-based workflows. Built operator-friendly interfaces for monitoring service health, escalation status, and day-to-day execution from a single control panel. Worked closely with stakeholders to convert policy and process requirements into practical, production-ready UI flows.",
+      "isFork": false,
+      "languages": [
+        {
+          "name":"React",
+          "iconifyClass":"simple-icons:react"
+        },
+        {
+          "name":"TypeScript",
+          "iconifyClass":"simple-icons:typescript"
+        },
+        {
+          "name":"TanStack Query",
+          "iconifyClass":"simple-icons:reactquery"
         }
       ]
     },
@@ -119,7 +145,7 @@
       "name": "Resume Builder App",
       "createdAt": "2021-01-01T08:31:51Z",
       "url": "https://github.com/sarabpreets7/resumebuild",
-      "description": "🚀 A react application which helps a user create a standout resume within minutes.",
+      "description": "🚀 Developed a React-based resume builder that enables users to create, edit, and export professional resumes in minutes. Implemented dynamic form sections, template-driven preview rendering, and structured data handling for easy customization. Focused on clean UX and validation so users can confidently build complete resumes without technical friction.",
       "isFork": false,
       "languages": [
         
