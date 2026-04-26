@@ -1,9 +1,11 @@
 // ResumePopup.js
 import React from "react";
 import './resumePopup.css';
-import resume from '../../assests/pdf/Sarabpreet_singh_resume_23.pdf';
+import { greeting } from "../../portfolio.js";
 
 const ResumePopup = ({ onClose }) => {
+  const resumePreviewUrl = greeting.resumeLink.replace("/view?usp=sharing", "/preview");
+
   return (
     <div className="resume-popup" onClick={onClose}>
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
@@ -12,7 +14,7 @@ const ResumePopup = ({ onClose }) => {
         </button>
         <iframe
           title="My Resume"
-          src={resume}
+          src={resumePreviewUrl}
           width="100%"
           height="100%"
           frameBorder="0"
