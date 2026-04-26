@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2cfb8d0b9e88217612efdd56dc0dd894",
+    "revision": "0f99803ac248f38ad4c4013480c80c89",
     "url": "/my-portfolio/index.html"
   },
   {
-    "revision": "d4290244ad748d0b53f8",
+    "revision": "cba1ec9c8e347c6712a3",
     "url": "/my-portfolio/static/css/main.9bef8d16.chunk.css"
   },
   {
-    "revision": "99ab4d6881053b844a72",
-    "url": "/my-portfolio/static/js/2.03ce0077.chunk.js"
+    "revision": "01c1eb11033094b10381",
+    "url": "/my-portfolio/static/js/2.04d8d441.chunk.js"
   },
   {
-    "revision": "d4290244ad748d0b53f8",
-    "url": "/my-portfolio/static/js/main.c43e5bd7.chunk.js"
+    "revision": "cba1ec9c8e347c6712a3",
+    "url": "/my-portfolio/static/js/main.60eb86d6.chunk.js"
   },
   {
     "revision": "cef005eb670c2d5cee3e",
@@ -50,10 +50,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ee6539921d713482b8ccd4d0d23961bb",
     "url": "/my-portfolio/static/media/Montserrat-Regular.ee653992.ttf"
-  },
-  {
-    "revision": "385d542f7c01053dbae22b5a62097952",
-    "url": "/my-portfolio/static/media/Sarabpreet_singh_resume_23.385d542f.pdf"
   },
   {
     "revision": "16559172ca1d4d552390b48f19e102ba",
